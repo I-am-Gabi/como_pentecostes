@@ -1,0 +1,119 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  height: 290px;
+  min-width: 1000px;
+  padding-top: 0px;
+  background: url("../img/fabric_plaid.png") repeat top left;
+}
+
+h2 {
+    font-family: Patrick Hand SC;
+}
+
+.navbar { 
+  margin-top: 20px;
+  padding-top: 1px;
+  background-color: rgba(200, 200, 200, 0.9);
+  clear: both;
+}
+
+#header h1 a {
+  background: url("../img/headerlogo.png") no-repeat scroll 0% 0% transparent;
+  width: 113px;
+  height: 104px;
+  display: block;
+  margin-top: -40px;
+}
+
+#header h1 a span {
+    display: none;  
+}
+
+#header h1 {
+    position: relative;
+}
+
+.navbar-collapse {
+    padding: 20px; 
+}
+/*font-family: Patrick Hand SC;
+font-family: "Dosis",sans-serif;*/
+.navbar-collapse ul li {
+  font-family: "Dosis",sans-serif;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-shadow: none;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+section.about {
+  height: 604px;
+  padding-top: 100px;
+}
+
+section .content {
+  width: 1170px;
+  margin: 0px auto;
+  clear: both;
+  display: block;
+  position: relative;
+}
+
+section .content > [class*="grid-"]:first-child {
+    margin-top: 0px;
+    text-align: right;
+}
+section .content > [class*="grid-"] {
+    margin-top: 75px;
+}
+
+[class="grid-"]:first-child, [class*="grid-"]:first-child {
+    margin-left: 0px;
+}
+.grid-4 {
+    width: 370px;
+}
+
+[class="grid-"], [class*="grid-"] {
+    -moz-box-sizing: border-box;
+    float: left;
+    margin-left: 30px;
+    min-height: 1px;
+}
+
+blockquote {
+    margin-right: 0px;
+    padding: 120px 20px;
+}
+
+  blockquote p{
+    font-size: 14px;
+    font-style: italic;
+  }
+
+
+.grid-8 {
+    width: 650px;
+}
+
+section.about .content > [class*="grid-"]:nth-child(2) {
+    margin-top: 53px;
+}
+
+section .content > [class*="grid-"] {
+    margin-top: 75px;
+}
+
+
+[class="grid-"], [class*="grid-"] {
+    -moz-box-sizing: border-box;
+    float: left;
+    margin-left: 30px;
+    min-height: 1px;
+}
