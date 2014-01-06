@@ -7,22 +7,31 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/secope.css">
 
-	<link rel="shortcut icon" href="http://www.comonopentecostes.com.br/assets/ico/favicon.ico" type="image/x-icon">
-
 	<meta charset="utf-8">
 	<meta name="robots" content="all">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<!-- css Fotos -->
+
+  
+
+	  <!-- css Fotos -->
     <link rel="stylesheet" type="text/css" href="css/jcarousel.simple.css" />
-    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:400,700"></link>
+    
+    <!--<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Dosis:400,700"></link>-->
 
     <!-- Js Fotos -->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
 
+    <!-- Passar Foto -->
+    <script type="text/javascript" src="js/congresso.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.smooth-scroll.min.js"></script>
+
+
+
     <script type="text/javascript" src="js/jcarousel.simple.js"></script>
-	<!--[if lt IE 9]>
+      <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
@@ -31,14 +40,20 @@
 <body>
 	<!-- Social Scripts -->
 	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
+	<script>
+  (function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0];
 	  if (d.getElementById(id)) return;
 	  js = d.createElement(s); js.id = id;
 	  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=414583358578045";
 	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	}(document, 'script', 'facebook-jssdk'));
+  </script>
+	
+  <script>
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  </script>
+
 	<script type="text/javascript" src="https://apis.google.com/js/platform.js">
 	  {lang: 'pt-BR'}
 	</script>
@@ -130,11 +145,12 @@
         
         </div>
       </section>
-    </div>
+  </div>
 
     <!-- Registration -->
     <div class="container">
       <section class="inscricao" id="inscricao">
+      <h2> Inscrições </h2> <br><br>
           <p class="aviso" style="display: none;" id="avisoInscricao"></p>
         
         <form action="javascript:void(0);" method="get" id="inscricaoForm" class="form-inline" role="form">
@@ -306,7 +322,7 @@
           
           <label class="title">Possui Plano de Saúde?</label>
           <input type="radio" name="planoSaude" id="planoN" value="n" checked="checked" /> <label for="planoN">Não</label>
-          <input type="radio" name="planoSaude" id="planoY" value="y" /> <label for="planoY">Sim</label>
+          <input type="radio" name="planoSaude" id="planoY" value="y" /> <label for="planoY">Sim</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           
           <span id="areaplano">
           <div class="form-group">
@@ -319,7 +335,7 @@
           <br />
           <label class="title">Toma Remédio?</label>
           <input type="radio" name="remedio" id="remedioN" value="n" checked="checked" /> <label for="remedioN">Não</label>
-          <input type="radio" name="remedio" id="remedioY" value="y" /> <label for="remedioY">Sim</label>
+          <input type="radio" name="remedio" id="remedioY" value="y" /> <label for="remedioY">Sim</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           
           <span id="arearemedio">
           <div class="form-group">
@@ -333,7 +349,7 @@
           
           <label class="title">Necessita de cuidado médico especial?</label>
           <input type="radio" name="medico" id="medicoN" value="n" checked="checked" /> <label for="medicoN">Não</label>
-          <input type="radio" name="medico" id="medicoY" value="y" /> <label for="medicoY">Sim</label>
+          <input type="radio" name="medico" id="medicoY" value="y" /> <label for="medicoY">Sim</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           
           <span id="areamedico">
           <div class="form-group">
@@ -360,7 +376,7 @@
           -->
           <label class="title">Alergia a Medicamentos?</label>
           <input type="radio" name="alergiamed" id="alergiamedN" value="n" checked="checked" /> <label for="alergiamedN">Não</label>
-          <input type="radio" name="alergiamed" id="alergiamedY" value="y" /> <label for="alergiamedY">Sim</label>
+          <input type="radio" name="alergiamed" id="alergiamedY" value="y" /> <label for="alergiamedY">Sim</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           
           <span id="areaalergiamed">
           <div class="form-group">
@@ -374,7 +390,7 @@
           
           <label class="title">Alergia a Alimentos?</label>
           <input type="radio" name="alergiaalim" id="alergiaalimN" value="n" checked="checked" /> <label for="alergiaalimN">Não</label>
-          <input type="radio" name="alergiaalim" id="alergiaalimY" value="y" /> <label for="alergiaalimY">Sim</label>
+          <input type="radio" name="alergiaalim" id="alergiaalimY" value="y" /> <label for="alergiaalimY">Sim</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           
           <span id="areaalergiaalim">
           <div class="form-group">
@@ -429,9 +445,10 @@
       </section>
     </div>
 
-    <br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br>
 
-	<div class ="container">
+  <!-- fotos -->
+	<div class="container">
       <section class="fotos" id="fotos">
         <div class="content">
           <div class="wrapper">
@@ -460,6 +477,7 @@
                   </div> 
               </li>
             <!-- end 1ª  -->
+
             <!-- 2º dia -->
               <li>
                 <h2>
@@ -483,6 +501,7 @@
                 </div> 
               </li>
             <!-- end 2º -->
+
             <!-- 3º dia -->
               <li>
                 <h2>
@@ -503,9 +522,10 @@
 
                     <a data-jcarousel-control="true" data-target="-=1" href="#" class="carousel-control-prev">&lsaquo;</a>
                     <a data-jcarousel-control="true" data-target="+=1" href="#" class="carousel-control-next">&rsaquo;</a>
-                  </div> 
+                </div> 
               </li>
             <!-- end 3º -->
+
             <!-- 4º dia -->
               <li>
                 <h2>
@@ -534,9 +554,81 @@
           </div>
         </div>
       </section>
-    </div>
+  </div>
 
-    <br><br><br><br> 
+  <br><br><br><br> 
+
+  <!-- Noticias -->
+  <div class="container">
+      <section class="noticias" id="noticias">
+        <div class="content">
+
+          <!--<div class="grid-4">  grid 4 
+              <blockquote id="cit">
+                <p style="font-family: Dosis,sans-serif;">
+                  1 Chegando o dia de Pentecoste, estavam todos reunidos num só lugar.
+                  2 De repente veio do céu um som, como de um vento muito forte, e encheu toda a casa na qual estavam assentados.
+                  3 E viram o que parecia línguas de fogo, que se separaram e pousaram sobre cada um deles.
+                  4 Todos ficaram cheios do Espírito Santo e começaram a falar noutras línguas, conforme o Espírito os capacitava.
+                </p>
+                <cite>
+                  Atos 2
+                </cite>
+              </blockquote>
+          </div>  Fim do grid 4 -->
+
+          <div class="grid-8">
+            <!-- Button trigger modal -->
+            <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+              Launch demo modal
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 style="text-aling: left" class="modal-title" id="myModalLabel">Modal Heading</h4>
+                  </div>
+                  <div style="text-aling: left" class="modal-body">
+                    <h4>Text in a modal</h4>
+                    <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+                    <h4>Popover in a modal</h4>
+                    <p>This <a href="#" role="button" class="btn btn-default popover-test" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a> should trigger a popover on click.</p>
+
+                    <h4>Tooltips in a modal</h4>
+                    <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> should have tooltips on hover.</p>
+
+                    <hr>
+
+                    <h4>Overflowing text to show scroll behavior</h4>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+          </div> <!-- Fim grip 8 -->
+
+        
+        </div>
+      </section>
+  </div>
+
+
 
 	<!-- jQuery -->
     <script src="js/jquery.min.js"></script>
@@ -544,19 +636,19 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- Main js -->
     <script src="js/secope.main.js"></script>
-	<!-- Google Analytics -->
-	<!--<script type="text/javascript">
+     <!-- Google Analytics -->
+        <!--<script type="text/javascript">
 
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-26625706-1']);
-	  _gaq.push(['_trackPageview']);
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-26625706-1']);
+          _gaq.push(['_trackPageview']);
 
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
 
-	</script>-->
+        </script>-->
 </body>
 </html>
