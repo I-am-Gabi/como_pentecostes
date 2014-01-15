@@ -2,13 +2,18 @@ body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    	font-weight: 300;
 }
-
+.text-hide {
+	text-indent: 110%;
+	white-space: nowrap;
+	overflow: hidden;
+}
 
 /* Header */
 .jumbotron {
 	background-image: url(../img/bgHeader.jpg);
 	background-size: cover;
 	background-attachment: fixed;
+	background-repeat: repeat;
 	color: #f0f0f0;
 	text-align: center;
 	margin: 0 auto;
